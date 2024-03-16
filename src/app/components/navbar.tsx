@@ -5,7 +5,7 @@ import { faSun, faMoon, faBars, faXmark } from "@fortawesome/free-solid-svg-icon
 
 import {
     Button,
-    Navbar,
+    Navbar as NextUINavbar,
     NavbarBrand,
     NavbarContent,
     NavbarItem,
@@ -16,7 +16,7 @@ import {
     NavbarMenuItem,
 } from "@nextui-org/react";
 
-export default function () {
+export default function CustomNavbar() {
     const [isOpen, setIsOpen] = useState(false);
     const [isDarkMode, setIsDarkMode] = useState(false);
     const [isSideNavOpen, setIsSideNavOpen] = useState(false);
@@ -35,7 +35,7 @@ export default function () {
         padding: 2rem
     `;
 
-    const CustomNavbar = styled(Navbar)`
+    const CustomNavbar = styled(NextUINavbar)`
         background-color: rgba(220, 220, 220, 0.5);
 
         & > header {
